@@ -1,0 +1,326 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding-top: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 3px #999999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+header > div {
+  width: 100%;
+  max-width: 1366px;
+  margin: auto;
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.btn, button, input[type='submit'] {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: green;
+  border: solid 1px green;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px #999;
+  color: white;
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition: all .3s;
+}
+
+.btn:hover {
+  color: green;
+  background-color: white
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  font-size: .9rem;
+  column-gap: 24px;
+  color: #606366;
+
+}
+
+.menu a{
+  color: #606366;
+}
+
+.menu a:hover{
+  opacity: .8;
+}
+
+.menu-container {
+  padding: 0 16px;
+}
+
+.logo {
+  background: #f8b133;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1rem;
+  padding: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  column-gap: 2vw;
+  padding: 1.8vw;
+  padding-top: 0
+}
+
+.card {
+  width: 14vw;
+  height: 20vw;
+  box-shadow: 1px 1px 2px #666;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image img{
+  width: 100%;
+  transition: 2s width;
+}
+
+.card-image img:hover{
+  width: 110%;
+  opacity: .8
+}
+
+.card-title {
+  display: inline-block;
+  padding: 16px;
+  position: absolute;
+  bottom: 0
+}
+
+.sashes {
+  background: red;
+  display: inline-block;
+  position: absolute;
+  right: -35%;
+  top: 7%;
+  width: 100%;
+  transform: rotate(45deg);
+  text-align: center;
+  z-index: 1;
+}
+
+.sashes-yellow {
+  background-color: yellow
+}
+
+.sashes-red {
+  background-color: red;
+  color: white
+}
+
+.sashes-green {
+  background-color: green
+}
+
+.sashes-grey {
+  background-color: grey
+}
+
+.welcome-container {
+  width: 100%;
+  height: calc(100vh - 50px);
+  background: url('https://www.teahub.io/photos/full/197-1975100_hollywood-movie-poster-background.jpg');
+    color: white;
+  background-size: cover;
+  animation: anim 10s infinite
+}
+
+@keyframes anim {
+  50% {background-position: center;}
+}
+
+
+.welcome {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, .8);
+  padding-top: 140px
+}
+
+.welcome-text {
+  -webkit-text-stroke: 1px #ccc;
+  font-weight: bold;
+  margin-bottom: 32px;
+  font-size: 3rem;
+}
+
+.movie-details {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  padding: 16px;
+  padding-top: 0;
+}
+
+.details-description {
+  background: #f1f1f1;
+  padding: 16px
+}
+
+.details-description h2 {
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.details-description h2:first-of-type {
+ margin-top: 0
+}
+
+.details-description p {
+  margin-top: 0
+}
+
+.movie-form {
+  padding: 16px;
+  background-color: #ccc;
+  max-width: 400px;
+  margin-top: 16px
+}
+
+.movie-form input:not([type='submit']){
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 4px
+}
+
+.details-cover {
+  width: 200px;
+  margin-right: 16px
+}
+
+.details-cover img{
+  width: 100%;
+}
+
+.about-developer {
+  text-align: center;
+  line-height: 1.7rem;
+}
+
+.loader {
+  text-align: center;
+}
+
+@media (max-width:700px)  { 
+  .menu-overlay {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 53px;
+    height: calc(100vh - 53px);
+    background-color: rgba(0, 0, 0, .5); 
+  }
+
+  .menu {
+    display: initial;
+    background-color: #ffffff;  
+    position: absolute;
+    top: 53px;
+    right: 0;
+    height: calc(100vh - 53px);
+  }
+
+.menu li {
+ 
+    padding: 8px 16px;  
+    border-bottom: solid 1px #ccc
+  }
+
+.humburger {
+    color: white;  
+  }
+
+  .movie-details {
+    flex-direction: column;
+}
+.movie-form {
+  max-width: initial
+}
+.details-cover {
+  width: initial;
+  margin: 0 ;
+}
+
+.details-cover img {
+  width: 100%;
+}
+
+}
+
+@media (max-width:700px)  { 
+  .card {
+    width: 21.5vw;
+    height: 32vw;
+  }
+}
+
+@media (max-width:500px)  { 
+  .card {
+    width: 29vw;
+    height: 42vw;
+  }
+}
+
+@media (max-width:400px)  { 
+  .card {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width:700px)  { 
+  .mobile-hide {
+    display: none;
+  }
+}
+
+@media (min-width:700px)  { 
+  .desktop-hide {
+    display: none;
+  }
+}
