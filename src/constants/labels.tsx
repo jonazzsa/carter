@@ -17,7 +17,11 @@ const label = {
     DEVELOPER_PHONE: "084 326 5349",
     DEVELOPER_SURNAME: "Moapolela",
     DEVELOPER_EMAIL: "za.sa.jonas@gmail.com",
-    DEVELOPER_INFO: "developer infomation"
+    DEVELOPER_INFO: "developer infomation",
+    PAGE_TITLE_HOME: "Awesome Movies - Browse latest movies from action, comedy, horror and more",
+    PAGE_TITLE_ABOUT: "About the Developer - Jonas Moapolela",
+    PAGE_TITLE_POPULAR_MOVIES: "Popular Movies - Action, comedy, horror, sci-fi and more",
+    PAGE_TITLE_POPULAR_MOVIES_DETAILS: "Movie Details" 
 };
 
 export default label;

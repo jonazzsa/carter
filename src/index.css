@@ -8,6 +8,8 @@ a {
 
 h1 {
   text-align: center;
+  color: rgba(255, 255, 255, .2);
+  font-weight: 100;
 }
 
 body {
@@ -18,13 +20,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(#333333, #000000);
+  background-size: contain;
+  min-height: 100vh;;
 }
 
 header {
   background-color: #000000;
   display: flex;
   align-items: center;
-  box-shadow: 0 2px 3px #999999;
   position: fixed;
   width: 100%;
   top: 0;
@@ -44,10 +48,9 @@ header > div {
 .btn, button, input[type='submit'] {
   display: inline-block;
   padding: 8px 16px;
-  background-color: green;
-  border: solid 1px green;
+  background-color: #f8b133;
+  border: solid 1px #f8b133;
   border-radius: 8px;
-  box-shadow: 2px 2px 2px #999;
   color: white;
   text-transform: uppercase;
   font-size: .8rem;
@@ -57,7 +60,7 @@ header > div {
 }
 
 .btn:hover {
-  color: green;
+  color: #f8b133;
   background-color: white
 }
 
@@ -85,8 +88,7 @@ header > div {
 }
 
 .logo {
-  background: #f8b133;
-  color: rgba(255, 255, 255, 1);
+  color: #f8b133;
   font-size: 1rem;
   padding: 16px;
   font-weight: bold;
@@ -106,14 +108,15 @@ header > div {
 .card {
   width: 14vw;
   height: 20vw;
-  box-shadow: 1px 1px 2px #666;
+  border-radius: 8px;
   position: relative;
   overflow: hidden;
 }
 
+
 .card-image img{
   width: 100%;
-  transition: 2s width;
+  transition: 2s width;  
 }
 
 .card-image img:hover{
@@ -146,7 +149,8 @@ header > div {
 
 .sashes-red {
   background-color: red;
-  color: white
+  color: white;
+  box-shadow: 2px 3px 4px #000;
 }
 
 .sashes-green {
@@ -178,12 +182,11 @@ header > div {
   text-align: center;
   align-items: center;
   flex-direction: column;
-  background: rgba(255, 255, 255, .8);
+  background: rgba(0, 0, 0, .8);
   padding-top: 140px
 }
 
 .welcome-text {
-  -webkit-text-stroke: 1px #ccc;
   font-weight: bold;
   margin-bottom: 32px;
   font-size: 3rem;
@@ -244,6 +247,12 @@ header > div {
 
 .loader {
   text-align: center;
+  color: white;
+  width: 100%;
+}
+
+.about-developer {
+  color: rgba(255, 255, 255, .3)
 }
 
 @media (max-width:700px)  { 
